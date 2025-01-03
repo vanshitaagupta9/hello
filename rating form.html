@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .rating label {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+ <div class="form-container">
+        <h2>Survey Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="rating">rating</label>
+                <div class="rating">
+                    <input type="radio" id="rating1" name="rating" value="1"><label for="rating1">1 excellent</label>
+                    <input type="radio" id="rating2" name="rating" value="2"><label for="rating2">2 good</label>
+                    <input type="radio" id="rating3" name="rating" value="3"><label for="rating3">3 fair </label>
+                    <input type="radio" id="rating4" name="rating" value="4"><label for="rating4">4 poor</label>
+                    </div>
+            </div>
+             <div class="form-group">
+                <label for="suggestions">Do you have any suggestions for us?</label>
+                <textarea id="suggestions" name="suggestions" placeholder="Your suggestions..."></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agree" name="agree" value="yes">
+                <label for="agree">I agree to the terms and conditions.</label>
+            </div>
+              <div class="form-group">
+                <input type="submit" value="Submit">
+                <script src="script.js"></script>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
